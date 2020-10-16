@@ -2,26 +2,16 @@
 @import './mixins.scss';
 
 .vt-loading {
-  @include position();
-  display: inline;
-  height: 100%;
-  width: 100%;
-  &__panel {
-    @include position($position: absolute, $top: 50%, $left: 50%);
-    transform: translate(-50%, -50%);
-    // animation:turn 1s linear infinite; 
-    // color: $white;
-    z-index: 100;
-    &__icon {
-      background: red;
-    }
-  }
-}
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  animation:turn 2s linear infinite;
 
-@keyframes turn{
-  0%{-webkit-transform:rotate(0deg);}
-  25%{-webkit-transform:rotate(90deg);}
-  50%{-webkit-transform:rotate(180deg);}
-  75%{-webkit-transform:rotate(270deg);}
-  100%{-webkit-transform:rotate(360deg);}
+  @keyframes turn{
+    0%{transform:rotate(0deg);}
+    25%{transform:rotate(90deg);}
+    50%{transform:rotate(180deg);}
+    75%{transform:rotate(270deg);}
+    100%{transform:rotate(360deg);}
+  }
 }

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Text } from '@tarojs/components'
+
+import ClassNames from 'classnames'
 import PropTypes from 'prop-types'
 import { pxToTransform } from '@/utils/transform'
 import './index.scss'
@@ -13,15 +15,16 @@ class VtIcon extends Component {
   }
 
   render () {
-    const { name, custom, size, color, className } = this.props
+    const { name, custom, size, color, className, style } = this.props
     console.log(this.props)
     const rootStyle = {
       fontSize: `${pxToTransform(parseInt(String(size)) * 2)}`,
       color,
+      ...style
     }
     return (
       <Text
-        className={[custom, name, className].join(' ')}
+        className={[custom, `icon-${name}`, className].join(' ')}
         style={ rootStyle }
       />
     )

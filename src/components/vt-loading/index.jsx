@@ -1,25 +1,39 @@
-import { View } from '@tarojs/components'
 import React, { Component } from 'react'
 import VtIcon from '@/components/vt-icon'
 
+import classNames from 'classnames'
+import PropTypes from 'prop-types'
+
 import '@/styles/vt-loading.scss'
 
-const VtLoading = Slot => {
-  return class extends Component {
-    render () {
-      console.log(this.props)
-      return <View className="vt-loading">
-        <View className="vt-loading__panel">
-          <VtIcon
-            className="vt-loading__panel__icon"
-            name="icon-icon-test56"
-            size="20"
-          />
-        </View>
-        <Slot { ...this.props } />
-      </View>
-    }
+class VtLoading extends Component {
+  static defaultProps = {
+    size: 12,
+    color: '',
+    icon: `loading`,
+    customStyle: {}
   }
+
+  render() {
+    const { size, color, icon, customStyle } = this.props
+    return (
+      <VtIcon
+        className="vt-loading"
+        color={ color }
+        name={ icon }
+        size={ size }
+      />
+    )
+  }
+}
+
+VtLoading.propTypes = {
+  size: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
+  customStyle: PropTypes.object,
+  color: PropTypes.string
 }
 
 export default VtLoading
