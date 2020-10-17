@@ -1,0 +1,12 @@
+@import './var.scss';
+@import './mixins.scss';
+
+.vt-cell-group {
+  // background: $vt-cell-group-background-color;
+  &__title {
+    padding: $vt-cell-group-title-padding;
+    color: $vt-cell-group-title-color;
+    font-size: $vt-cell-group-title-font-size;
+    line-height: $vt-cell-group-title-line-height;
+  }
+}

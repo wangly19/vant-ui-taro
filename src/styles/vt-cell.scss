@@ -1,2 +1,105 @@
 @import './var.scss';
-@import './mixins.scss'
+@import './mixins.scss';
+
+.vt-cell {
+  @include position();
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: $vt-vertical-padding $vt-cell-horizontal-padding;
+  overflow: hidden;
+  color: $vt-cell-text-color;
+  font-size: $vt-cell-font-size;
+  line-height: $vt-cell-line-height;
+  background: $vt-cell-background-color;
+
+  &:last-child::after,
+  &--border::after {
+    display: none;
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+
+  // label
+  &__label {
+    margin-top: $vt-cell-label-margin-top;
+    color: $vt-cell-label-color;
+    font-size: $vt-cell-label-font-size;
+    line-height: $vt-cell-label-line-height;
+  }
+
+  &__title,
+  &__value {
+    flex: 1;
+  }
+
+  &__value {
+    position: relative;
+    overflow: hidden;
+    color: $vt-cell-value-color;
+    text-align: right;
+    vertical-align: middle;
+    word-wrap: break-word;
+  }
+
+  &__title, 
+  &__value {
+    font-size: $vt-cell-font-size;
+    line-height: $vt-cell-line-height;
+    overflow: hidden;
+  }
+
+  &__left-icon,
+  &__right-icon {
+    min-width: 1em;
+    height: $vt-cell-line-height;
+    font-size: $vt-cell-font-size !important;
+    line-height: $vt-cell-line-height;
+  }
+  &__left-icon {
+    margin-right: $padding-base; //4px
+    line-height: 1;
+    vertical-align: baseline;
+  }
+  &__right-icon {
+    margin-left: $padding-base;
+    color: $vt-cell-right-icon-color;
+  }
+
+  &--clickable {
+    cursor: pointer;
+    &:active {
+      background: $vt-cell-active-color;
+    }
+  }
+
+  // 元素垂直居中
+  &--center {
+    align-items: center;
+  }
+
+  // 底部边框
+  &--border {
+    border-bottom: {
+      width: 1px;
+      style: solid;
+      color: $vt-cell-border-color
+    }
+  }
+}
+
+.vt-cell--large {
+  padding-top: $vt-cell-large-vertical-padding;
+  padding-bottom: $vt-cell-large-vertical-padding;
+  .vt-cell__title {
+    font-size: $vt-cell-large-title-font-size;
+  }
+  .van-cell__label {
+    font-size: $vt-cell-large-label-font-size;
+  }
+  .vt-cell__left-icon {
+    font-size: $vt-cell-large-title-font-size !important;
+  }
+}

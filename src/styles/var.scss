@@ -1,3 +1,4 @@
+@import './reset.scss';
 // Basic Colors
 $black: #000 !default;
 $white: #fff !default;
@@ -11,6 +12,16 @@ $gray: #c8c9cc !default;
 $gray-light: #e5e5e5 !default;
 $gray-darker: #7d7e80 !default;
 $gray-dark: #969799 !default;
+
+
+$gray-1: #f7f8fa !default;
+$gray-2: #f2f3f5 !default;
+$gray-3: #ebedf0 !default;
+$gray-4: #dcdee0 !default;
+$gray-5: #c8c9cc !default;
+$gray-6: #969799 !default;
+$gray-7: #646566 !default;
+$gray-8: #323233 !default;
 
 // Component Colors
 $text-color: #323233 !default;
@@ -38,13 +49,43 @@ $font-size-sm: 12px;
 $font-size-md: 14px;
 $font-size-lg: 16px;
 
+// 行高
+$font-weight-bold: 500;
+$line-height-xs: 14px;
+$line-height-sm: 18px;
+$line-height-md: 20px;
+$line-height-lg: 22px;
 
-// button 按钮变量
+
+// @wang: feat(button)
 $vt-button-size-large: 44px;
 $vt-button-size-small: 30px;
 $vt-button-size-mini: 22px;
 $vt-button-border-radius: 2px;
 $vt-button-padding: 15px;
 $vt-button-circle: 40px;
-
-// cell 变量
+// @wang: feat(cell)
+$vt-cell-font-size: $font-size-md;
+$vt-cell-line-height: $padding-lg;
+$vt-cell-icon-size: $font-size-lg;
+$vt-vertical-padding: $padding-sm;
+$vt-cell-horizontal-padding: $padding-md;
+$vt-cell-text-color: $text-color;
+$vt-cell-background-color: $white;
+$vt-cell-border-color: $border-color;
+$vt-cell-active-color: $active-color;
+$vt-cell-label-color: $gray-6;
+$vt-cell-label-font-size: $font-size-sm;
+$vt-cell-label-line-height: $line-height-sm;
+$vt-cell-label-margin-top: $padding-base;
+$vt-cell-value-color: $gray-6;
+$vt-cell-right-icon-color: $gray-6;
+$vt-cell-large-vertical-padding: $padding-sm;
+$vt-cell-large-title-font-size: $font-size-lg; 
+$vt-cell-large-label-font-size: $font-size-xs;
+// @wang: feat(cell-group)
+$vt-cell-group-background-color: $white;
+$vt-cell-group-title-color: $gray-6;
+$vt-cell-group-title-padding: $padding-md $padding-md $padding-xs;
+$vt-cell-group-title-font-size: $font-size-md;
+$vt-cell-group-title-line-height: 16px;

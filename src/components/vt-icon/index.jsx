@@ -4,13 +4,13 @@ import { Text } from '@tarojs/components'
 import ClassNames from 'classnames'
 import PropTypes from 'prop-types'
 import { pxToTransform } from '@/utils/transform'
-import './index.scss'
+import '@/styles/vt-icon.scss'
 
 class VtIcon extends Component {
 
   static defaultProps = {
     custom: 'icon iconfont',
-    size: 16,
+    size: 24,
     className: ''
   }
 
@@ -18,13 +18,13 @@ class VtIcon extends Component {
     const { name, custom, size, color, className, style } = this.props
     console.log(this.props)
     const rootStyle = {
-      fontSize: `${pxToTransform(parseInt(String(size)) * 2)}`,
+      fontSize: `${pxToTransform(parseInt(String(size)))}`,
       color,
       ...style
     }
     return (
       <Text
-        className={[custom, `icon-${name}`, className].join(' ')}
+        className={['vt-icon', custom, `icon-${name}`, className].join(' ')}
         style={ rootStyle }
       />
     )
