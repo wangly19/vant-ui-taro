@@ -57,6 +57,21 @@ $line-height-md: 20px;
 $line-height-lg: 22px;
 
 
+// Animation
+$animation-duration-base: 0.3s;
+$animation-duration-fast: 0.2s;
+$animation-timing-function-enter: ease-out;
+$animation-timing-function-leave: ease-in;
+
+// Border
+$border-color: $gray-3;
+$border-width-base: 1px;
+$border-radius-sm: 2px;
+$border-radius-md: 4px;
+$border-radius-lg: 8px;
+$border-radius-max: 999px;
+
+
 // @wang: feat(button)
 $vt-button-size-large: 44px;
 $vt-button-size-small: 30px;
@@ -89,3 +104,64 @@ $vt-cell-group-title-color: $gray-6;
 $vt-cell-group-title-padding: $padding-md $padding-md $padding-xs;
 $vt-cell-group-title-font-size: $font-size-md;
 $vt-cell-group-title-line-height: 16px;
+
+
+// @wang: feat(tag)
+$vt-tag-padding: 0 $padding-base;
+$vt-tag-text-color: $white;
+$vt-tag-font-size: $font-size-sm;
+$vt-tag-border-radius: 2px;
+$vt-tag-line-height: 16px;
+$vt-tag-medium-padding: 2px 6px;
+$vt-tag-large-padding: $padding-base $padding-xs;
+$vt-tag-large-border-radius: $border-radius-md;
+$vt-tag-large-font-size: $font-size-md;
+$vt-tag-round-border-radius: $border-radius-max;
+$vt-tag-danger-color: $red;
+$vt-tag-primary-color: $blue;
+$vt-tag-success-color: $green;
+$vt-tag-warning-color: $orange;
+$vt-tag-default-color: $gray-6;
+$vt-tag-plain-background-color: $white;
+
+
+// @wang: feat(action-sheet)
+// ActionSheet
+$vt-action-sheet-max-height: 80%;
+$vt-action-sheet-header-height: 48px;
+$vt-action-sheet-header-font-size: $font-size-lg;
+$vt-action-sheet-description-color: $gray-6;
+$vt-action-sheet-description-font-size: $font-size-md;
+$vt-action-sheet-description-line-height: $line-height-md;
+$vt-action-sheet-item-background: $white;
+$vt-action-sheet-item-font-size: $font-size-lg;
+$vt-action-sheet-item-line-height: $line-height-lg;
+$vt-action-sheet-item-text-color: $text-color;
+$vt-action-sheet-item-disabled-text-color: $gray-5;
+$vt-action-sheet-subname-color: $gray-6;
+$vt-action-sheet-subname-font-size: $font-size-sm;
+$vt-action-sheet-subname-line-height: $line-height-sm;
+$vt-action-sheet-close-icon-size: 22px;
+$vt-action-sheet-close-icon-color: $gray-5;
+$vt-action-sheet-close-icon-active-color: $gray-6;
+$vt-action-sheet-close-icon-padding: 0 $padding-md;
+$vt-action-sheet-cancel-text-color: $gray-7;
+$vt-action-sheet-cancel-padding-top: $padding-xs;
+$vt-action-sheet-cancel-padding-color: $background-color;
+$vt-action-sheet-loading-icon-size: 22px;
+
+
+// Popup
+$vt-popup-background-color: $white;
+$vt-popup-transition: transform $animation-duration-base;
+$vt-popup-round-border-radius: 20px;
+$vt-popup-close-icon-size: 22px;
+$vt-popup-close-icon-color: $gray-5;
+$vt-popup-close-icon-active-color: $gray-6;
+$vt-popup-close-icon-margin: 16px;
+$vt-popup-close-icon-z-index: 1;
+
+
+// @wang feat(overflow)
+$vt-overflow-z-index: 1;
+$vt-overflow-background-color: rgba(0, 0, 0, 0.7);

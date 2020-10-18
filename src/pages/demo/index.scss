@@ -1,0 +1,43 @@
+@import '~@/styles/mixins.scss';
+.home-panel {
+  height: 100vh;
+  background: #f4f4f4;
+  padding: 15px;
+  &__band {
+    width: 100%;
+    text-align: center;
+    @include flex($direction: column);
+    &__title {
+      font-size: 30px;
+      @include flex();
+      height: 54px;
+      line-height: 54px;
+      font-weight: bold;
+      .vant-logo {
+        height: 45px;
+        width: 45px;
+        margin-right: 10px;
+      }
+      .status-code {
+        margin-top: 10px;
+      }
+    }
+    &__label {
+      font-size: 14px;
+      color: #505050;
+      padding: 10px;
+    }
+  }
+  &__menu {
+    margin-top: 15px;
+    padding: 15px 10px;
+    border-radius: 2px;
+    background: #FFF;
+    &__item {
+      @include flex($justifyContent: space-between);
+    }
+    &:active {
+      background: #f4f4f4;
+    }
+  }
+}

@@ -4,29 +4,36 @@ import { View } from '@tarojs/components'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import '@/styles/vt-row.scss'
+import { pxToTransform } from '@/utils/transform'
 
 function VtRow ({
   className,
   customStyle = {},
-  gutter = 0,
   children,
   type,
+  gutter,
   align,
   justify
 }) {
 
-  const createGutter = () => {
-    const px = Number(gutter);
-    if (!gutter) return
-    const spaces = []
-    const groups = [[]]
-    let totalSpan = 0
-    console.log(children)
+  /**
+   * @wang 对子元素注入gutter属性
+   */
+  const vtColList = () => {
+    const slot =  gutter ? React.Children.map(children, el => {
+      return React.cloneElement(el, { gutter: gutter })
+    }) : children
+    return slot
   }
+
+  const spaces = gutter ? {
+    marginLeft: pxToTransform(-(Number(gutter)/2)),
+    marginRight: pxToTransform(-(Number(gutter)/2)),
+  } : {}
 
   return (
     <View
-      customStyle
+      style={Object.assign(spaces, customStyle)}
       className={classNames(
         'vt-row',
         type && `vt-row--${type}`,
@@ -35,7 +42,7 @@ function VtRow ({
         className
       )}
     >
-    { children }
+    { vtColList() }
     </View>
   )
 }

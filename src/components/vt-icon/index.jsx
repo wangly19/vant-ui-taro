@@ -18,7 +18,7 @@ class VtIcon extends Component {
     const { name, custom, size, color, className, style } = this.props
     console.log(this.props)
     const rootStyle = {
-      fontSize: `${pxToTransform(parseInt(String(size)))}`,
+      fontSize: `${pxToTransform(parseInt(Number(size)))}`,
       color,
       ...style
     }

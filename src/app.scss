@@ -1,1 +1,6 @@
-@import './styles/vant.scss';
+@import './styles/reset.scss';
+
+page, body {
+  height: 100%;
+  font-size: 16px !important;
+}

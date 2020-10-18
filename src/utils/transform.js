@@ -1,8 +1,9 @@
-import { pxTransform } from '@tarojs/taro'
+import { pxTransform, getEnv } from '@tarojs/taro'
 
 
 export const pxToTransform = (px) => {
-  const mod = pxTransform(px, 375)
-  console.log(mod)
-  return mod
+  if (getEnv() === 'WEB') {
+    return pxTransform(px, 375)
+  }
+  return pxTransform(px * 2)
 }

@@ -1,0 +1,94 @@
+@import './var.scss';
+@import './mixins.scss';
+.vt-tag {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: $vt-tag-padding;
+  color: $vt-tag-text-color;
+  font-size: $vt-tag-font-size;
+  line-height: $vt-tag-line-height;
+  border-radius: $vt-tag-border-radius;
+
+  &--default {
+    background-color: $vt-tag-default-color;
+
+    &.van-tag--plain {
+      color: $vt-tag-default-color;
+    }
+  }
+
+  &--danger {
+    background-color: $vt-tag-danger-color;
+
+    &.van-tag--plain {
+      color: $vt-tag-danger-color;
+    }
+  }
+
+  &--primary {
+    background-color: $vt-tag-primary-color;
+
+    &.van-tag--plain {
+      color: $vt-tag-primary-color;
+    }
+  }
+
+  &--success {
+    background-color: $vt-tag-success-color;
+
+    &.van-tag--plain {
+      color: $vt-tag-success-color;
+    }
+  }
+
+  &--warning {
+    background-color: $vt-tag-warning-color;
+
+    &.van-tag--plain {
+      color: $vt-tag-warning-color;
+    }
+  }
+
+  &--plain {
+    background-color: $vt-tag-plain-background-color;
+
+    &::before {
+      @include position($position: absolute);
+      border: 1px solid currentColor;
+      border-radius: inherit;
+      content: '';
+      pointer-events: none;
+    }
+  }
+
+  &--medium {
+    padding: $vt-tag-medium-padding;
+  }
+
+  &--large {
+    padding: $vt-tag-large-padding;
+    font-size: $vt-tag-large-font-size;
+    border-radius: $vt-tag-large-border-radius;
+  }
+
+  &--mark {
+    border-radius: 0 $vt-tag-round-border-radius $vt-tag-round-border-radius 0;
+
+    &::after {
+      display: block;
+      width: 2px;
+      content: '';
+    }
+  }
+
+  &--round {
+    border-radius: $vt-tag-round-border-radius;
+  }
+
+  &__close {
+    min-width: 1em;
+    margin-left: 2px;
+    cursor: pointer;
+  }
+}

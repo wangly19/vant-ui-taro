@@ -33,9 +33,13 @@ class VtButton extends Component {
       round,
       block,
       ghost,
+      className,
+      customStyle
     } = this.props
     return (
-      <View className={classNames(
+      <View 
+        style={customStyle}
+        className={classNames(
         'vt-button',
         block && `vt-button--block`,
         round && 'vt-button--circle',
@@ -43,7 +47,7 @@ class VtButton extends Component {
         `vt-button--${type}`,
         type !== 'default' && ghost && `vt-button--${type}-ghost`,
         `vt-button--${size}`,
-        this.props.className
+        className
         )}>
         { this.ButtonText() }
       </View>

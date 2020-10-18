@@ -1,0 +1,14 @@
+@import './var.scss';
+@import './mixins.scss';
+
+.vt-overflow {
+  @include position(
+    $position: fixed,
+    $top: 0,
+    $left: 0
+  );
+  height: 100%;
+  width: 100%;
+  z-index: $vt-overflow-z-index;
+  background: $vt-overflow-background-color;
+}
