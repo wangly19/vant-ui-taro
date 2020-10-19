@@ -161,6 +161,22 @@ $vt-popup-close-icon-active-color: $gray-6;
 $vt-popup-close-icon-margin: 16px;
 $vt-popup-close-icon-z-index: 1;
 
+// @wang feat(toast)
+$vt-toast-max-width: 70%;
+$vt-toast-font-size: $font-size-md;
+$vt-toast-text-color: $white;
+$vt-toast-loading-icon-color: $white;
+$vt-toast-line-height: $line-height-md;
+$vt-toast-border-radius: $border-radius-lg;
+$vt-toast-background-color: fade($black, 70%);
+$vt-toast-icon-size: 36px;
+$vt-toast-text-min-width: 96px;
+$vt-toast-text-padding: $padding-xs $padding-sm;
+$vt-toast-default-padding: $padding-md;
+$vt-toast-default-width: 88px;
+$vt-toast-default-min-height: 88px;
+$vt-toast-position-top-distance: 20%;
+$vt-toast-position-bottom-distance: 20%;
 
 // @wang feat(overflow)
 $vt-overflow-z-index: 1;
