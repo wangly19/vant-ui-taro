@@ -8,7 +8,7 @@ import '@/styles/vt-loading.scss'
 
 class VtLoading extends Component {
   static defaultProps = {
-    size: 12,
+    size: 18,
     color: '',
     icon: `loading`,
     customStyle: {}
@@ -18,7 +18,10 @@ class VtLoading extends Component {
     const { size, color, icon, customStyle } = this.props
     return (
       <VtIcon
-        className="vt-loading"
+        className={classNames([
+          'vt-loading',
+          className
+        ])}
         color={ color }
         name={ icon }
         size={ size }

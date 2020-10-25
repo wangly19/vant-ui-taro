@@ -1,4 +1,5 @@
 @import './var.scss';
+@import './annimation.scss';
 
 .vt-toast {
   position: fixed;
@@ -30,12 +31,6 @@
   &--unclickable {
     // lock scroll
     overflow: hidden;
-
-    // should not add pointer-events: none directly to body tag
-    // that will cause unexpected tap-highlight-color in mobile safari
-    * {
-      pointer-events: none;
-    }
   }
 
   &--text,
@@ -69,6 +64,27 @@
   }
 
   &__text {
-    margin-top: $vt-padding-xs;
+    margin-top: $padding-xs;
   }
+}
+
+
+//进场前的瞬间
+.test-enter{
+  opacity: 0;
+}
+//进场过程中
+.test-enter-active{
+  animation: $animation-duration-base van-fade-in both
+    $animation-timing-function-enter;
+}
+
+//离开过程中
+.test-exit-active{
+  animation: $animation-duration-base van-fade-out both
+      $animation-timing-function-leave
+}
+//离开后
+.test-exit-done{
+  opacity: 0;
 }

@@ -168,7 +168,7 @@ $vt-toast-text-color: $white;
 $vt-toast-loading-icon-color: $white;
 $vt-toast-line-height: $line-height-md;
 $vt-toast-border-radius: $border-radius-lg;
-$vt-toast-background-color: fade($black, 70%);
+$vt-toast-background-color:  rgba(0, 0, 0, 0.7);
 $vt-toast-icon-size: 36px;
 $vt-toast-text-min-width: 96px;
 $vt-toast-text-padding: $padding-xs $padding-sm;
@@ -181,3 +181,18 @@ $vt-toast-position-bottom-distance: 20%;
 // @wang feat(overflow)
 $vt-overflow-z-index: 1;
 $vt-overflow-background-color: rgba(0, 0, 0, 0.7);
+
+
+
+// @wang feat(checkbox)
+$vt-checkbox-size: 20px;
+$vt-checkbox-border-color: $gray-5;
+$vt-checkbox-transition-duration: $animation-duration-fast;
+$vt-checkbox-label-margin: $padding-xs;
+$vt-checkbox-label-color: $text-color;
+$vt-checkbox-checked-icon-color: $blue;
+$vt-checkbox-disabled-icon-color: $gray-5;
+$vt-checkbox-disabled-label-color: $gray-5;
+$vt-checkbox-disabled-background-color: $border-color;
+
+// @wang feat(radio)

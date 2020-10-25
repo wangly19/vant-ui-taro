@@ -33,7 +33,7 @@ export default function Demo() {
           <VtTag type="primary" className="status-code">develop</VtTag>
         </View>
         <Text className="home-panel__band__label">
-          能够在Taro<VtTag type="primary">v3.0</VtTag>Vant基础库，
+          工作在Taro<VtTag type="primary">v3.0</VtTag>Vant基础库，
           功能迭代更新中，进度可以查看工作日志和<VtTag type="warning">commit</VtTag>记录。
         </Text>
       </View>

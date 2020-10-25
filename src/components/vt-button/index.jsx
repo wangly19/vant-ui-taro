@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { View, Text } from '@tarojs/components'
 import classNames from 'classnames'
 
+import VtLoading from '@/components/vt-loading'
+
 import PropTypes from 'prop-types'
 import '@/styles/vt-button.scss'
 
@@ -34,7 +36,8 @@ class VtButton extends Component {
       block,
       ghost,
       className,
-      customStyle
+      customStyle,
+      loading,
     } = this.props
     return (
       <View 
@@ -49,6 +52,7 @@ class VtButton extends Component {
         `vt-button--${size}`,
         className
         )}>
+        { loading && <VtLoading></VtLoading> }
         { this.ButtonText() }
       </View>
     )

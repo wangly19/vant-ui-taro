@@ -1,5 +1,7 @@
-import React from 'react'
-import { View } from '@tarojs/components'
+import React, { useState } from 'react'
+import { View, Text } from '@tarojs/components'
+import { CSSTransition } from 'react-transition-group';
+import VtIcon from '@/components/vt-icon'
 
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
@@ -9,13 +11,69 @@ function VtToast (props) {
   const {
     className,
     customStyle,
-    children,
+    message,
+    iconPrefix,
+    type,
+    icon,
+    loadingType,
+    transition,
+    position
   } = props
+
+  const Icon = () => {
+    // message status
+    const hasIcon = icon || type === 'success' || type === 'fail';
+    if (hasIcon) {
+      return (
+        <VtIcon 
+          className="vt-toast__icon"
+          name={icon}
+        />
+        // <Icon
+        //   class={bem('icon')}
+        //   classPrefix={iconPrefix}
+        //   name={icon || type}
+        // />
+      );
+    }
+    // loading status
+    if (type === 'loading') {
+      return <Loading class={bem('loading')} type={loadingType} />;
+    }
+  }
+  
+  const Message = () => {
+    if (message) {
+      return (<Text className="vt-toast__text">
+        { message }
+      </Text>)
+    }
+  }
+
   return (
-    <View 
-      style={ customStyle }
-      className=""
-    >
+    <View>
+      
+    <CSSTransition
+      in={true}
+      timeout={1000}
+      unmountOnExit//执行完成后dom销毁
+      classNames={transition}
+      appear={true}//开启第一次执行展示的样式
+    >   
+      <View 
+        style={ customStyle }
+        className={
+          classNames(
+            'vt-toast',
+            `vt-toast--${position}`,
+            
+          )
+        }
+      >
+        { Icon() }
+        { Message() }
+      </View>
+    </CSSTransition>
     </View>
   )
 }
@@ -40,14 +98,13 @@ VtToast.propTypes = {
 }
 
 VtToast.defaultProps = {
-  icon: PropTypes.string,
+  icon: 'check',
   className: null,
   type: 'text',
   position: 'middle',
-  transition: 'van-fade',
+  transition: 'test',
   lockScroll: false,
-
-
+  message: ''
 }
 
 export default VtToast 

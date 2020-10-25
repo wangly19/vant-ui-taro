@@ -16,7 +16,6 @@ class VtIcon extends Component {
 
   render () {
     const { name, custom, size, color, className, style } = this.props
-    console.log(this.props)
     const rootStyle = {
       fontSize: `${pxToTransform(parseInt(Number(size)))}`,
       color,

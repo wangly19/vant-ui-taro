@@ -6,7 +6,6 @@ module.exports = {
   },
   mini: {},
   h5: {
-    router: 'browser',
     devServer: {
       port: 4005
     }

@@ -1,0 +1,29 @@
+@import './var.scss';
+@import './mixins.scss';
+
+.vt-checkbox {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  &__icon {
+    line-height: 1;
+    border: {
+      style: solid;
+      color: $vt-checkbox-border-color;
+      width: 1px;
+    }
+    &-fix {
+      color: $white;
+    }
+    &--checked {
+      transition: all .8s;
+      background-color: $vt-checkbox-checked-icon-color;
+      border-color: $vt-checkbox-checked-icon-color;
+    }
+    &--disable {
+      color: $vt-checkbox-disabled-icon-color;
+      background-color: $vt-checkbox-disabled-background-color;
+      border-color: $vt-checkbox-disabled-background-color;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+//进场前的瞬间
+.fade-enter{
+  opacity: 0;
+}
+//进场过程中
+.fade-enter-active{
+  animation: $animation-duration-base van-fade-in both
+    $animation-timing-function-enter;
+}
+
+//离开过程中
+.fade-exit-active{
+  animation: $animation-duration-base van-fade-out both
+      $animation-timing-function-leave
+}
+//离开后
+.fade-exit-done{
+  opacity: 0;
+}

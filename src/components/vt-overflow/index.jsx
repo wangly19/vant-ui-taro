@@ -12,7 +12,7 @@ function VtOverFlow (props) {
     show = false,
     zIndex,
     lockScroll = true,
-    Children,
+    children,
     onClick
   } = props
 
@@ -31,9 +31,9 @@ function VtOverFlow (props) {
       )
     }
     onClick={ onClick }
-    onTouchmove={ lockScroll ? preventTouchMove : noop }
+    // onTouchmove={ lockScroll ? preventTouchMove : noop }
     >
-      { Children }
+      { children }
     </View>
   )
 }
