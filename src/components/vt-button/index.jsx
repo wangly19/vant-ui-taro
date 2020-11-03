@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import { View, Text } from '@tarojs/components'
 import classNames from 'classnames'
-
 import VtLoading from '@/components/vt-loading'
-
 import PropTypes from 'prop-types'
 import '@/styles/vt-button.scss'
 

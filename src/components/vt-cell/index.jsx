@@ -61,11 +61,6 @@ class VtCell extends Component {
   }
 
   /**
-   * Cell左侧图标
-   */
-  leftIcon = () => {}
-
-  /**
    * Cell右侧图标
    */
   rightIcon = () => {
@@ -87,7 +82,7 @@ class VtCell extends Component {
         url: to
       })
       onClick && console.warn(`
-        警告: 在进行路由跳转的的情况下，本身onClick事件并不会执行。如果
+        警告: 在进行路由跳转的的情况下，本身onClick事件并不会执行。
       `)
       return
     }

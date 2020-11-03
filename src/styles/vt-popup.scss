@@ -1,4 +1,5 @@
 @import './var.scss';
+@import './annimation.scss';
 
 .vt {
   &-overflow-hidden {
@@ -12,12 +13,12 @@
     background-color: $vt-popup-background-color;
     transition: $vt-popup-transition;
     -webkit-overflow-scrolling: touch;
+    
 
     &--center {
       top: 50%;
       left: 50%;
       transform: translate3d(-50%, -50%, 0);
-
       &.van-popup--round {
         border-radius: $vt-popup-round-border-radius;
       }
@@ -28,7 +29,7 @@
       left: 0;
       width: 100%;
 
-      &.van-popup--round {
+      &.vt-popup--round {
         border-radius: 0 0 $vt-popup-round-border-radius $vt-popup-round-border-radius;
       }
     }
@@ -38,7 +39,7 @@
       right: 0;
       transform: translate3d(0, -50%, 0);
 
-      &.van-popup--round {
+      &.vt-popup--round {
         border-radius: $vt-popup-round-border-radius 0 0 $vt-popup-round-border-radius;
       }
     }
@@ -48,7 +49,7 @@
       left: 0;
       width: 100%;
 
-      &.van-popup--round {
+      &.vt-popup--round {
         border-radius: $vt-popup-round-border-radius $vt-popup-round-border-radius 0 0;
       }
     }
@@ -58,7 +59,7 @@
       left: 0;
       transform: translate3d(0, -50%, 0);
 
-      &.van-popup--round {
+      &.vt-popup--round {
         border-radius: 0 $vt-popup-round-border-radius $vt-popup-round-border-radius 0;
       }
     }
@@ -100,6 +101,15 @@
     &-slide-left-enter-from,
     &-slide-left-leave-active {
       transform: translate3d(-100%, -50%, 0);
+    }
+
+    &__body {
+      padding: {
+        left: $vt-popup-close-icon-margin;
+        top: $vt-popup-close-icon-margin + $vt-popup-close-icon-size + $vt-popup-close-icon-margin;
+        right: $vt-popup-close-icon-margin;
+        bottom: $vt-popup-close-icon-margin;
+      }
     }
 
     &__close-icon {

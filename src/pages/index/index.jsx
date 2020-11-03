@@ -29,7 +29,11 @@ export default function Index() {
       <View className='start-panel'>
         
         {/* <VtCheckBox checked={ check } onChange={ setCheck }></VtCheckBox> */}
-        <VtPopUp/>
+        <VtPopUp position="bottom">
+          <View>
+            1111
+          </View>
+        </VtPopUp>
         {/* <VtTag>标签</VtTag> */}
         {/* <VtOverflow>
           1111

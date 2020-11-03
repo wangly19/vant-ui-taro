@@ -22,7 +22,7 @@ function VtOverFlow (props) {
   }
 
   return (
-    <View
+    show && <View
       style={ style }
       className={
       classNames(
@@ -33,8 +33,8 @@ function VtOverFlow (props) {
     onClick={ onClick }
     // onTouchmove={ lockScroll ? preventTouchMove : noop }
     >
-      { children }
-    </View>
+    { children }
+  </View>
   )
 }
 

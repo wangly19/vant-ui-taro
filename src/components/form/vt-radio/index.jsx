@@ -38,7 +38,7 @@ function VtCheckBox (props) {
 
   /**
    * 切换状态，并抛出事件
-   */
+   */ 
   const onChangeCheckbox = () => {
     console.log(isCheck)
     if (isGroup) {
